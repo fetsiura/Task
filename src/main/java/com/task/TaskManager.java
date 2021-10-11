@@ -31,7 +31,7 @@ public class TaskManager {
                 case "exit":
                     Task.saveTasks(FILE);
                     System.out.println(Colors.BLUE_BOLD);
-                    System.out.println("Bye, bye ");
+                    System.out.println("Bye, bye "+name);
                     System.exit(0);
                     break;
                 case "add":
