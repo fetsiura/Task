@@ -1,13 +1,13 @@
 package com.task;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+
+import static com.task.TaskManager.options;
+import static com.task.TaskManager.tasks;
 
 public class Print {
 
 
-   public static void showOptions(String [] options) {
+   public static void showOptions() {
 
        System.out.println(Colors.BLUE_BOLD);
        System.out.println("Please select an options"+Colors.RESET);
@@ -17,13 +17,17 @@ public class Print {
         }
     }
 
-    public static void printTasks(String [][] tasks){
+    public static void printTasks(){
+       int counter =1;
        for(int i =0; i<tasks.length;i++){
-
+           System.out.print(counter+": ");
            for (int j =0; j<tasks[i].length;j++){
-               System.out.println(tasks[i][j]);
+               System.out.print(tasks[i][j] + " ");
            }
+           counter++;
+           System.out.println();
        }
+
     }
 
 
